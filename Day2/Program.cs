@@ -6,35 +6,6 @@ using System.Threading.Tasks;
 
 namespace Day2
 {
-
-    // Class Definition
-    class Dog
-    {
-        private int Age;
-        public string name;
-
-        public Dog(string _name)
-        {
-            Age = 0;
-            name = _name;
-        }
-
-        public void HappyBirthday()
-        {
-            Age++;
-        }
-
-        public int GetAge()
-        {
-            return Age;
-        }
-
-        public int GetAgeDogYears()
-        {
-            return Age * 7;
-        }
-    }
-
     class Program
     {
         static void Main(string[] args)
@@ -50,8 +21,25 @@ namespace Day2
             var ageDogYears = peanut.GetAgeDogYears();
             Console.WriteLine(age);
             Console.WriteLine(ageDogYears);
-            Console.WriteLine(peanut.name);
+            // Console.WriteLine(peanut.name);
+
+            var casey = new Dog("Casey");
+            var spaghetti = new Dog("Spaghetti");
+            spaghetti.HappyBirthday();
+            var rex = new Dog("Rex");
+
+            // Console.WriteLine(peanut);
+            peanut.AddFriend(casey);
+            peanut.AddFriend(spaghetti);
+            peanut.AddFriend(spaghetti);
+            peanut.AddFriend(rex);
+
+            peanut.GetDogFriends();
+            peanut.RemoveFriend(spaghetti);
+            peanut.GetDogFriends();
+
             Console.ReadLine();
+
 
         }
     }
