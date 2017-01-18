@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Day3
 {
-    class Circle : Shape
+    public class Circle : Shape
     {
+        public double diameter {
+            get {
+                return 2 * radius;
+            }
+        }
+
         public Circle(double _radius) : base(_radius)
         {
         }
