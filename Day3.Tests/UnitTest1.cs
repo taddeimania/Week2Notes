@@ -6,6 +6,7 @@ namespace Day3.Tests
     [TestClass]
     public class UnitTest1
     {
+        /*
         [TestMethod]
         public void SquareComputesCorrectly()
         {
@@ -33,5 +34,6 @@ namespace Day3.Tests
             Assert.AreEqual(sut.radius, 0);
             Assert.AreEqual(sut.Area(), Double.PositiveInfinity);
         }
+        */
     }
 }
