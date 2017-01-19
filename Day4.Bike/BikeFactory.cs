@@ -14,18 +14,26 @@ namespace Day4.Bike
             var rng = new Random();
             for (int i = 0; i < count; i++)
             {
-                bool isRandomBike = rng.Next(10) < 4;
+                CreateBike(bikeList, rng);
 
-                if (isRandomBike)
-                {
-                    double speedModifier = rng.Next(8, 13) / 10;
-                    int speedLimit = rng.Next(7, 20);
-                    bikeList.Add(new Bike(speedModifier, speedLimit));
-                }
-
-                bikeList.Add(new Bike());
             }
             return bikeList;
+        }
+
+        private static void CreateBike(List<Bike> bikeList, Random rng)
+        {
+            bool isRandomBike = rng.Next(10) < 4;
+
+            if (isRandomBike)
+            {
+                double speedModifier = rng.Next(8, 13) / 10;
+                int speedLimit = rng.Next(7, 20);
+                bikeList.Add(new Bike(speedModifier, speedLimit));
+            }
+            else
+            {
+                bikeList.Add(new Bike());
+            }
         }
     }
 }

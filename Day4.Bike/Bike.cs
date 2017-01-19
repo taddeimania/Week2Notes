@@ -24,7 +24,7 @@ namespace Day4.Bike
 
         public int GetSpeed()
         {
-            return speed;
+            return (int)(speed * speedModifier);
         }
 
         public double GetSpeedModifier()
